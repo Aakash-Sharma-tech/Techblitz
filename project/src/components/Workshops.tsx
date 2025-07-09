@@ -1,9 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Shield, Wifi, PenTool, Figma, Smartphone, Calendar, Award } from 'lucide-react';
 
 const Workshops = () => {
-  const [viewMode] = useState<'cards' | 'timeline'>('cards');
 
   const workshops = [
     {
@@ -123,32 +122,8 @@ const Workshops = () => {
           >
             Explore 5 cutting-edge technology domains with hands-on learning, expert mentorship, and industry-relevant projects.
           </motion.p>
-
-          {/* View Toggle */}
-          {/* <motion.div 
-            variants={itemVariants}
-            className="flex items-center justify-center gap-4 mb-12"
-          >
-            <span className={`text-sm ${viewMode === 'cards' ? 'text-primary-400' : 'text-gray-400'}`}>
-              Card View
-            </span>
-            <button
-              onClick={() => setViewMode(viewMode === 'cards' ? 'timeline' : 'cards')}
-              className="relative p-1 rounded-full bg-gray-800 border border-gray-700"
-            >
-              {viewMode === 'cards' ? (
-                <ToggleLeft className="h-6 w-6 text-primary-400" />
-              ) : (
-                <ToggleRight className="h-6 w-6 text-cyber-400" />
-              )}
-            </button>
-            <span className={`text-sm ${viewMode === 'timeline' ? 'text-cyber-400' : 'text-gray-400'}`}>
-              Timeline View
-            </span>
-          </motion.div> */}
         </motion.div>
 
-        {viewMode === 'cards' ? (
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -211,55 +186,6 @@ const Workshops = () => {
               );
             })}
           </motion.div>
-        ) : (
-          <motion.div
-            className="max-w-4xl mx-auto"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 via-cyber-500 to-neon-500" />
-              
-              {workshops.map((workshop) => {
-                const IconComponent = workshop.icon;
-                return (
-                  <motion.div
-                    key={workshop.id}
-                    variants={itemVariants}
-                    className="relative flex items-center mb-12 last:mb-0"
-                  >
-                    {/* Timeline Node */}
-                    <div className={`relative z-10 flex items-center justify-center w-16 h-16 bg-gradient-to-br ${workshop.gradient} rounded-full border-4 border-gray-900`}>
-                      <IconComponent className="h-6 w-6 text-white" />
-                    </div>
-
-                    {/* Content */}
-                    <div className="ml-8 flex-1 bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50">
-                      <div className="flex items-start justify-between mb-4">
-                        <h3 className="text-2xl font-bold text-white">{workshop.title}</h3>
-                        <div className="flex gap-2">
-                          <span className="bg-primary-500/20 text-primary-400 px-3 py-1 rounded-full text-sm">
-                            {workshop.duration}
-                          </span>
-                          <span className="bg-neon-500/20 text-neon-400 px-3 py-1 rounded-full text-sm">
-                            {workshop.attendance} attendance
-                          </span>
-                        </div>
-                      </div>
-                      <p className="text-gray-300 mb-4">{workshop.description}</p>
-                      <div className="text-sm text-gray-400">
-                        📅 Daily Session: 3:00 PM - 4:30 PM
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
-        )}
 
         {/* Additional Info */}
         <motion.div
