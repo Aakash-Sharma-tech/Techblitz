@@ -4,8 +4,8 @@
   "description": "Backend for Techblitz registration using Node.js and Firebase",
   "main": "index.js",
    "scripts": {
-    "dev": "vercel dev"
-  },
+  "start": "node index.js"
+},
   "engines": {
   "node": "18.x"
 },
