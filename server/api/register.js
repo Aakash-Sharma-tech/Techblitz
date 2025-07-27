@@ -30,14 +30,14 @@
 
 const db = require('../firebaseConfig');
 
+
 module.exports = async (req, res) => {
-  // Allow CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   if (req.method === 'OPTIONS') {
-    return res.status(200).end(); // Handle preflight
+    return res.status(200).end(); // Handle CORS preflight
   }
 
   if (req.method !== 'POST') {
@@ -45,14 +45,9 @@ module.exports = async (req, res) => {
   }
 
   const {
-    firstName,
-    lastName,
-    contactNumber,
-    email,
-    rollNumber,
-    domain,
-    department,
-    semester
+    firstName, lastName, contactNumber,
+    email, rollNumber, domain,
+    department, semester
   } = req.body;
 
   try {
