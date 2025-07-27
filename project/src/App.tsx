@@ -7,9 +7,10 @@ import Register from './components/Register';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import BackgroundEffects from './components/BackgroundEffects';
-
+import FAQs from './components/FAQs';
+// import Example from './components/socials';
+import Company from './components/company';
 import Loader from './components/Loader';
-
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -34,16 +35,17 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white relative overflow-x-hidden">
-
-    
-
       <BackgroundEffects />
       <Header />
       <main>
         <Home />
         <Workshops />
+        <Company></Company>
+
         <About />
         <Register />
+        {/* <Example /> */}
+        <FAQs />
       </main>
       <Footer />
       <ScrollToTop />

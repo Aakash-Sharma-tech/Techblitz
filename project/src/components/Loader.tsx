@@ -75,7 +75,7 @@ const Loader = () => {
         </div>
 
         {/* Loading Text */}
-        <motion.h1
+        {/* <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
@@ -83,12 +83,23 @@ const Loader = () => {
         >
           <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
             TECHBLITZ
+                      <img src="./Techblitz.jpg" alt="" />
+
           </span>
-        </motion.h1>
+        </motion.h1> */}
+
+        <motion.img
+          src="./LogoFinal.png"
+          alt="Logo loading"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mx-auto mb-4"
+        />
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}  
           transition={{ delay: 0.7 }}
           className="text-gray-300 text-lg mb-8"
         >

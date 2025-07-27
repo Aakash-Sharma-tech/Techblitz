@@ -1,7 +1,7 @@
 // import React from 'react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +12,8 @@ const Header = () => {
     { id: 'home', label: 'Home' },
     { id: 'workshops', label: 'Workshops' },
     { id: 'about', label: 'About' },
-    { id: 'register', label: 'Register' }
+    { id: 'register', label: 'Register' },
+    { id: 'faqs', label: 'FAQs' }
   ];
 
   useEffect(() => {
@@ -52,20 +53,20 @@ const Header = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-gray-900 backdrop-blur-md border-b border-primary-500/20' 
+          ? 'bg-black backdrop-blur-md border-b border-primary-500/20' 
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-3 py-1">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <motion.div 
             className="flex items-center space-x-3"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="relative">
-              <GraduationCap className="h-8 w-8 text-primary-500 animate-pulse" />
-              <div className="absolute inset-0 h-8 w-8 bg-primary-500/20 rounded-full animate-ping" />
+            <div className="relative border-blue-400 border-2 rounded-full p-2">
+             <img src="./Cosmos logo_11zon.jpg" alt="Cosmos Logo" width={30} height={30}/>
+              {/* <div className="absolute inset-0 h-8 w-8 bg-primary-500/20 rounded-full" /> */}
             </div>
             <div>
               <h1 className="text-xl font-bold bg-gradient-to-r from-primary-400 to-cyber-400 bg-clip-text text-transparent">
@@ -75,6 +76,7 @@ const Header = () => {
                 COSMOS: Science and Tech Community
               </p>
             </div>
+             
           </motion.div>
 
           {/* Desktop Navigation */}

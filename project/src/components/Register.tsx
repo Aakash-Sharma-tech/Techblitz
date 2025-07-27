@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Mail, Hash, GraduationCap, Calendar, Send, CheckCircle } from 'lucide-react';
 
+
 const Register = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -21,10 +22,15 @@ const Register = () => {
   const domains = [
     'AIML',
     'CyberSecurity',
-    'IOT',
-    'AutoCAD',
+    'AIML webinar',
+    'DevOps',
+    'VLSI',
+    'Application of AIML in Space Science',
     'App Development',
-    'Figma'
+    'UI/UX',
+    'Backend Development',
+    'Management Aspects in Engineering',
+    'AWS'
   ]
 
   const departments = [
@@ -137,28 +143,6 @@ const handleSubmit = async (e: React.FormEvent) => {
   if (isSubmitted) {
     return (
       <>
-        {/* 🔔 Custom Instagram Alert */}
-        <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="max-w-xl mx-auto mb-6 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 px-6 py-4 rounded-md shadow-md"
-        >
-          <strong className="font-semibold">⚠️ Just One More Step!</strong>
-          <p className="mt-1">
-            Don’t forget to follow our official{" "}
-            <a
-              href="https://instagram.com/cosmos.jec"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline font-medium text-blue-600"
-            >
-              Instagram page
-            </a>{" "}
-            for live updates and event highlights!
-          </p>
-        </motion.div>
-
         <section id="register" className="py-20 relative">
           <div className="container mx-auto px-4">
             <motion.div
@@ -191,6 +175,50 @@ const handleSubmit = async (e: React.FormEvent) => {
             </motion.div>
           </div>
         </section>
+
+        {/* 🔔 Custom Instagram Alert */}
+        <motion.div
+          initial={{ scale: 1, opacity: 1 }}
+          animate={{ scale: 1.01, opacity: 1 }}
+          transition={{ duration: 5, ease: "easeOut" }}
+          className="max-w-xl mx-auto mb-6 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 px-6 py-4 rounded-md shadow-md"
+        >
+          <strong className="font-semibold">⚠️ Warning!</strong>
+          <p className="mt-1">
+            Don’t forget to follow our official{" "}
+            <a
+              href="https://instagram.com/cosmos.jec"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-medium text-blue-600"
+            >
+              Instagram page
+            </a>{" "}
+
+          </p>
+        </motion.div>
+
+
+        {/* <motion.div
+          initial={{ y: -20, opacity: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="max-w-xl mx-auto mb-6 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 px-6 py-4 rounded-md shadow-md"
+        >
+        <strong className="font-semibold">⚠️ Just One More Step!</strong>
+          <p className="mt-1">
+            Don’t forget to follow our official{" "}
+            <a
+              href="https://instagram.com/cosmos.jec"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-medium text-blue-600"
+            >
+              Instagram page
+            </a>{" "}
+            for live updates and event highlights!
+          </p>
+        </motion.div> */}
       </>
     );
   }
@@ -218,6 +246,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             className="text-xl text-gray-300 max-w-2xl mx-auto"
           >
             Secure your spot in Techblitz 2025 and embark on an exciting journey of technical learning and innovation.
+            Register multiple times for multiple domains. 
           </motion.p>
         </motion.div>
 
@@ -228,7 +257,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+          <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-8 border border-white/70">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -467,8 +496,10 @@ const handleSubmit = async (e: React.FormEvent) => {
           </div>
         </motion.div>
       </div>
+      
     </section>
   );
+  
 };
 
 export default Register;

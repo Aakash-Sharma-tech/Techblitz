@@ -1,6 +1,6 @@
 // import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Shield, Wifi, PenTool, Figma, Smartphone, Calendar, Award } from 'lucide-react';
+import { Brain, Shield, Figma, Smartphone, Calendar, Award, Cpu, Tv, Cloud, BrainCircuit, Briefcase, BrainCog, Workflow} from 'lucide-react';
 
 const Workshops = () => {
 
@@ -11,60 +11,133 @@ const Workshops = () => {
       icon: Brain,
       duration: '3 days',
       description: 'Dive into Artificial Intelligence and Machine Learning fundamentals, algorithms, and practical implementations.',
-      // attendance: '80%',
+      certificate:'Certificate of Participation and Excellence',
       color: 'primary',
-      gradient: 'from-primary-500 to-primary-600'
+      gradient: 'from-primary-500 to-primary-600',
+      level: 'Level - Beginner'
     },
     {
       id: 2,
       title: 'Cybersecurity',
       icon: Shield,
-      duration: '3 days',
+      duration: '2 days',
       description: 'Learn ethical hacking, network security, vulnerability assessment, and modern cybersecurity practices.',
-      // attendance: '80%',
+      certificate: 'Certificate of Participation and Excellence',
       color: 'cyber',
-      gradient: 'from-cyber-500 to-cyber-600'
+      gradient: 'from-cyber-500 to-cyber-600',
+      level: 'Level - Intermediate'
     },
     {
       id: 3,
-      title: 'IoT',
-      icon: Wifi,
-      duration: '1 day (3rd day)',
-      description: 'Explore Internet of Things, sensor integration, and smart device development with hands-on projects.',
-      // attendance: '90%',
-      color: 'neon',
-      gradient: 'from-neon-500 to-neon-600'
-    },
-    {
-      id: 4,
-      title: 'AutoCAD',
-      icon: PenTool,
+      title: 'VLSI',
+      icon: Cpu,
       duration: '2 days',
-      description: 'Master 2D and 3D design with AutoCAD, technical drawing, and computer-aided design principles.',
-      // attendance: '80%',
-      color: 'orange',
-      gradient: 'from-orange-500 to-orange-600'
+      description: 'Explore VLSI design principles, digital circuits, and modern semiconductor technologies.',
+      certificate: 'Certificate of Participation and Excellence',
+      color: 'neon',
+      gradient: 'from-neon-500 to-neon-600',
+      level: 'Level - Intermediate'
     },
+    // {
+    //   id: 4,
+    //   title: 'AutoCAD',
+    //   icon: PenTool,
+    //   duration: '2 days',
+    //   description: 'Master 2D and 3D design with AutoCAD, technical drawing, and computer-aided design principles.',
+    //   // certificate: '80%',
+    //   color: 'orange',
+    //   gradient: 'from-orange-500 to-orange-600',
+    //   level: 'Level - Beginner'
+    // },
     {
       id: 5,
       title: 'App Development',
       icon: Smartphone,
-      duration: '2 days',
+      duration: '3 days',
       description: 'Build mobile applications using modern frameworks, UI/UX principles, and deployment strategies.',
-      // attendance: '80%',
+      certificate: 'Certificate of Participation and Excellence',
       color: 'purple',
-      gradient: 'from-blue-800 to-blue-900'
+      gradient: 'from-blue-800 to-blue-900',
+      level: 'Level - Intermediate'
     },
     {
       id: 6,
-      title: 'Figma',
+      title: 'UI/UX Design',
       icon: Figma,
-      duration: '1 day (4th day)',
-      description: 'Learn UI/UX design principles and create interactive prototypes using Figma.',
-      attendance: '90%',
+      duration: '2 days',
+      description: 'Learn user interface and user experience design principles, prototyping, and usability testing.',
+      certificate: 'Certificate of Participation',
       color: 'pink',
-      gradient: 'from-pink-500 to-pink-600'
-    }
+      gradient: 'from-pink-500 to-pink-600',
+      level: 'Level - Beginner'
+    },
+    {
+      id: 7,
+      title: 'DevOps',
+      icon: Tv,
+      duration: '3 days',
+      description: 'Understand DevOps practices, CI/CD pipelines, and infrastructure as code for modern software development.',
+      certificate:'Certificate of Participation and Excellence',
+      color: 'green',
+      gradient: 'from-green-500 to-green-600',
+      level: 'Level - Advanced'
+    },
+   {
+  id: 13,
+  title: 'Management Aspects in Engineering',
+  icon: Briefcase, // You can swap this with any management/strategy-related icon
+  duration: '1 day',
+  description: 'Understand the intersection of engineering and management through project planning, resource allocation, and strategic decision-making principles.',
+  certificate: 'Certificate of Participation',
+  color: 'teal',
+  gradient: 'from-teal-500 to-teal-600',
+  level: 'Level - Beginner to Intermediate'
+},
+   {
+  id: 12,
+  title: 'AIML Webinar',
+  icon: BrainCircuit, // Use an appropriate icon, e.g., a brain or neural network symbol
+  duration: '1 day',
+  description: 'Explore the Industrial use of Artificial Intelligence and Machine Learning, including real-world applications, model training, and ethical considerations.',
+  certificate: 'Certificate of Participation',
+  color: 'indigo',
+  gradient: 'from-indigo-500 to-indigo-600',
+  level: 'Level - Advanced'
+},
+    {
+      id: 11,
+      title: 'Backend development',
+      icon: Workflow,
+      duration: '2 days',
+      description: 'Learn backend development using modern frameworks, databases, and API design principles.',
+      certificate: 'Certificate of Participation and Excellence',
+      color: 'purple',
+      gradient: 'from-purple-500 to-purple-600',
+      level: 'Level - Intermediate'
+    },
+    {
+      id: 12,
+      title: 'Applications of AIML in Space Science',
+      icon: BrainCog,
+      duration: '1 day',
+      description: 'Explore the applications of AI/ML in space science using advanced simulation techniques.',
+      certificate: 'Certificate of Participation',
+      color: 'cyan',
+      gradient: 'from-cyan-500 to-cyan-600',
+      level: 'Level - Advanced'
+    },
+    {
+  id: 14,
+  title: 'AWS Cloud Essentials',
+  icon: Cloud, // Use a cloud-related icon like 'Cloud', 'CloudUpload', etc.
+  duration: '1 day',
+  description: 'Get introduced to the fundamentals of AWS Cloud, core services, deployment models, and how cloud computing is transforming modern businesses.',
+  certificate: 'Certificate of Participation',
+  color: 'yellow',
+  gradient: 'from-yellow-400 to-yellow-500',
+  level: 'Level - Beginner'
+}
+
   ];
 
   const containerVariants = {
@@ -87,7 +160,7 @@ const Workshops = () => {
   };
 
   const cardVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
+    hidden: { scale: 1, opacity: 0 },
     visible: {
       scale: 1,
       opacity: 1,
@@ -120,7 +193,7 @@ const Workshops = () => {
             variants={itemVariants}
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
           >
-            Explore 5 cutting-edge technology domains with hands-on learning, expert mentorship, and industry-relevant projects.
+            Explore cutting-edge technology domains with hands-on learning, expert mentorship, and industry-relevant projects.
           </motion.p>
         </motion.div>
 
@@ -174,13 +247,14 @@ const Workshops = () => {
                     </div>
                     <div className="flex items-center gap-3 text-sm">
                       <Award className="h-4 w-4 text-neon-400" />
-                      <span className="text-gray-300">Certificate</span>
+                      <span className="text-gray-300">{workshop.certificate}</span>
                     </div>
+                    
                   </div>
 
                   {/* Floating Time Badge */}
                   <div className="absolute top-4 right-4 bg-gray-900/80 backdrop-blur-sm rounded-full px-3 py-1 text-xs text-primary-400 border border-primary-500/30">
-                    3:00 PM - 4:30 PM
+                    {workshop.level}
                   </div>
                 </motion.div>
               );
@@ -200,11 +274,11 @@ const Workshops = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
               <div>
                 <h4 className="font-semibold text-primary-400 mb-2">📅 Schedule</h4>
-                <p className="text-gray-300">Daily sessions from 3:00 PM to 4:30 PM</p>
+                <p className="text-gray-300">Daily 2 sessions between 6:00 PM to 10 PM</p>
               </div>
               <div>
                 <h4 className="font-semibold text-cyber-400 mb-2">🏆 Certification</h4>
-                <p className="text-gray-300">Based on attendance requirements</p>
+                <p className="text-gray-300">Based on certificate requirements and quizzes</p>
               </div>
               <div>
                 <h4 className="font-semibold text-neon-400 mb-2">🎤 Speakers</h4>
