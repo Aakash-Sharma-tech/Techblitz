@@ -82,7 +82,7 @@ const Home = () => {
   const addToCalendar = () => {
     const event = {
       text: 'TechBlitz 2025',
-      dates: '20250315T090000/20250315T180000',
+      dates: '20250801T021000/20250801T220000',
       details: 'A futuristic tech event organized by COSMOS community',
       location: 'Jashan Hall, Jabalpur Engineering College',
     };
